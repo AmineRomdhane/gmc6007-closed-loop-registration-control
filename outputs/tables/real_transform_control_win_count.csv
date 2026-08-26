@@ -1,0 +1,8 @@
+method,lambda_gain,num_case_wins
+unweighted_icp,1.0,4
+mlp_weighted_icp,1.0,3
+distance_weighted_icp,0.75,1
+distance_weighted_icp,1.0,1
+unweighted_icp,0.1,1
+unweighted_icp,0.4,1
+unweighted_icp,0.75,1
