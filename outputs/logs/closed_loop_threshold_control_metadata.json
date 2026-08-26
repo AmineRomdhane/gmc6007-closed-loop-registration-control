@@ -10,6 +10,6 @@
   "tau_max": 0.95,
   "kp_residual": 2.0,
   "kp_acceptance": 0.5,
-  "max_iterations": 50,
+  "max_iterations": 100,
   "convergence_tolerance": 0.0001
 }
