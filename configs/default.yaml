@@ -23,17 +23,17 @@ features:
   scenario_column: scenario
 
 registration_control:
-  controlled_variable: "combined_alignment_quality"
-  error_definition: "rmse_normalized_plus_one_minus_fitness"
-  max_iterations: 20
+  controlled_variable: "combined_correspondence_quality"
+  error_definition: "mean_point_to_plane_residual_plus_minimum_acceptance_constraint"
+  max_iterations: 50
   convergence_tolerance: 1.0e-4
   max_correspondence_distance: 0.0375
 
 control:
   architecture: "imc_inspired_closed_loop"
   reference_error: 0.0
-  lambda_values: [0.25, 0.5, 0.75, 1.0]
-  selected_lambda: 0.5
+  lambda_values: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50, 0.75, 1.00]
+  selected_lambda: 0.25
   error_alpha: 1.0
   error_beta: 1.0
 
