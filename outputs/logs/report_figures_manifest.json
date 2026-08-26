@@ -1,0 +1,43 @@
+[
+  {
+    "file": "outputs/figures/fig_01_mlp_threshold_metrics.png",
+    "description": "Comparison of accuracy, precision, recall, and F1 for MLP reliability thresholds 0.30 and 0.50."
+  },
+  {
+    "file": "outputs/figures/fig_02_ise_vs_lambda_by_scenario.png",
+    "description": "Mean integrated squared control error as a function of lambda for each scenario."
+  },
+  {
+    "file": "outputs/figures/fig_03_tv_tau_vs_lambda_by_scenario.png",
+    "description": "Mean total variation of the threshold tau as a function of lambda for each scenario."
+  },
+  {
+    "file": "outputs/figures/fig_04_f1_vs_lambda_by_scenario.png",
+    "description": "Final F1 score of accepted correspondences as a function of lambda for each scenario."
+  },
+  {
+    "file": "outputs/figures/fig_05_global_ise_vs_lambda.png",
+    "table": "outputs/tables/control_lambda_global_summary.csv",
+    "description": "Global average ISE versus lambda, computed over all samples."
+  },
+  {
+    "file": "outputs/figures/fig_06_global_tv_tau_vs_lambda.png",
+    "description": "Global average total variation of threshold tau versus lambda."
+  },
+  {
+    "file": "outputs/figures/fig_07_example_tau_history.png",
+    "sample_id": "box_sphere_static_noise_hard_mixed",
+    "scenario": "static_noise",
+    "description": "Example evolution of the controlled threshold tau over iterations for different lambda values."
+  },
+  {
+    "file": "outputs/figures/fig_08_example_control_error_history.png",
+    "sample_id": "box_sphere_static_noise_hard_mixed",
+    "scenario": "static_noise",
+    "description": "Example evolution of the closed-loop control error over iterations for different lambda values."
+  },
+  {
+    "file": "outputs/tables/best_lambda_by_scenario.csv",
+    "description": "Best lambda value per scenario according to minimum mean ISE."
+  }
+]

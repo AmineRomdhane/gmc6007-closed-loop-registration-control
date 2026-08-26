@@ -1,0 +1,15 @@
+{
+  "controlled_variable": "correspondence residual quality with minimum acceptance constraint",
+  "control_input": "acceptance threshold tau",
+  "internal_model": "MLP predicted correspondence reliability",
+  "imc_like_filter": "lambda_filter applied to threshold correction",
+  "residual_reference": 0.04,
+  "min_acceptance_ratio": 0.2,
+  "tau_initial": 0.5,
+  "tau_min": 0.05,
+  "tau_max": 0.95,
+  "kp_residual": 2.0,
+  "kp_acceptance": 0.5,
+  "max_iterations": 20,
+  "convergence_tolerance": 0.0001
+}

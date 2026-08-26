@@ -11,7 +11,6 @@ data/*
 !data/.gitkeep
 !data/README.md
 
-# Keep generated lightweight sklearn models for reproducibility.
 models/*
 !models/.gitkeep
 !models/README.md
@@ -19,13 +18,23 @@ models/*
 !models/*.json
 
 outputs/figures/*
-outputs/tables/*
-outputs/logs/*
-outputs/matrices/*
 !outputs/figures/.gitkeep
+!outputs/figures/*.png
+!outputs/figures/*.pdf
+
+outputs/tables/*
 !outputs/tables/.gitkeep
+!outputs/tables/*.csv
+
+outputs/logs/*
 !outputs/logs/.gitkeep
+!outputs/logs/*.json
+
+outputs/matrices/*
 !outputs/matrices/.gitkeep
+!outputs/matrices/*.csv
+!outputs/matrices/*.txt
+!outputs/matrices/*.json
 
 *.pt
 *.pth
