@@ -11,9 +11,12 @@ data/*
 !data/.gitkeep
 !data/README.md
 
+# Keep generated lightweight sklearn models for reproducibility.
 models/*
 !models/.gitkeep
 !models/README.md
+!models/*.joblib
+!models/*.json
 
 outputs/figures/*
 outputs/tables/*
@@ -26,8 +29,6 @@ outputs/matrices/*
 
 *.pt
 *.pth
-*.pkl
-*.joblib
 *.onnx
 
 *.aux

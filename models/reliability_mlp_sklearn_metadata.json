@@ -1,0 +1,54 @@
+{
+  "dataset_path": "/home/amine/GMC6003_registration/results/learning_data_synthetic_plus_real_curated_clean_v3/all_correspondences.csv",
+  "num_rows_total": 116278,
+  "num_rows_train": 92113,
+  "num_rows_test": 24165,
+  "num_train_samples": 68,
+  "num_test_samples": 17,
+  "feature_columns": [
+    "distance_T0",
+    "normal_dot_abs",
+    "fpfh_distance",
+    "log_normalized_density_ratio",
+    "is_mutual_nn"
+  ],
+  "target_column": "target_weight",
+  "group_column": "sample_id",
+  "architecture": "StandardScaler + MLPClassifier(5 -> 32 -> 16 -> 1)",
+  "threshold_0_30": {
+    "threshold": 0.3,
+    "accuracy": 0.5875853507138423,
+    "precision": 0.40370191976880204,
+    "recall": 0.8186130877633598,
+    "f1": 0.5407373271889401,
+    "roc_auc": 0.7370177809475792,
+    "confusion_matrix": [
+      [
+        8332,
+        8666
+      ],
+      [
+        1300,
+        5867
+      ]
+    ]
+  },
+  "threshold_0_50": {
+    "threshold": 0.5,
+    "accuracy": 0.7339540657976412,
+    "precision": 0.5790827261037291,
+    "recall": 0.37700572066415516,
+    "f1": 0.45668892081467083,
+    "roc_auc": 0.7370177809475792,
+    "confusion_matrix": [
+      [
+        15034,
+        1964
+      ],
+      [
+        4465,
+        2702
+      ]
+    ]
+  }
+}
