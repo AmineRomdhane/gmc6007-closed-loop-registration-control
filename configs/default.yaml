@@ -1,0 +1,43 @@
+project:
+  name: "GMC6007 closed-loop weighted registration control"
+
+paths:
+  previous_project_dir: "/home/amine/GMC6003_registration"
+  correspondence_dataset: "/home/amine/GMC6003_registration/results/learning_data_synthetic_plus_real_curated_clean_v3/all_correspondences.csv"
+  model_path: "/home/amine/GMC6003_registration/results/by_test/mlp_synthetic_plus_all_real_v3_final/mlp_synthetic_plus_all_real_v3_final_model.pt"
+  scaler_path: "/home/amine/GMC6003_registration/results/by_test/mlp_synthetic_plus_all_real_v3_final/mlp_synthetic_plus_all_real_v3_final_scaler.pkl"
+  output_dir: "outputs"
+
+features:
+  input_columns:
+    - distance_T0
+    - normal_dot_abs
+    - fpfh_distance
+    - log_normalized_density_ratio
+    - is_mutual_nn
+  diagnostic_columns:
+    - point_to_plane_residual
+    - label_distance
+  target_column: target_weight
+  group_column: sample_id
+  scenario_column: scenario
+
+registration_control:
+  controlled_variable: "combined_alignment_quality"
+  error_definition: "rmse_normalized_plus_one_minus_fitness"
+  max_iterations: 20
+  convergence_tolerance: 1.0e-4
+  max_correspondence_distance: 0.0375
+
+control:
+  architecture: "imc_inspired_closed_loop"
+  reference_error: 0.0
+  lambda_values: [0.25, 0.5, 0.75, 1.0]
+  selected_lambda: 0.5
+  error_alpha: 1.0
+  error_beta: 1.0
+
+experiment:
+  use_mlp_weights: true
+  compare_baselines: true
+  random_seed: 42
