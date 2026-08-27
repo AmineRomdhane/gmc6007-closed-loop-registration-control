@@ -179,21 +179,6 @@ At each iteration:
 7. A filter gain controls how much of the estimated correction is applied.
 8. The new transform is used at the next iteration.
 
-The transform update is
-
-\[
-T_{k+1}
-=
-\mathrm{Interp}
-\left(
-T_k,
-T_{\mathrm{est}},
-\lambda
-\right).
-\]
-
-The parameter \(\lambda\) controls how much of the estimated transform correction is applied at each iteration.
-
 ---
 
 # Preliminary Threshold-Control Experiment
